@@ -1,0 +1,15 @@
+#wrapper-component{
+  .__body{
+    padding: 2.5rem;
+    margin-top: -3rem;
+    background: white;
+    border-radius: 2rem 2rem 0 0;
+    height: 70vh;
+  }
+
+  .search-bar{
+    position: absolute;
+    padding: 1rem;
+    width: 100%;
+  }
+}
