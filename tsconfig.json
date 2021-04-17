@@ -19,14 +19,13 @@
     "isolatedModules": true,
     "noEmit": true,
     "jsx": "react-jsx",
-    "baseUrl": "src"
+    "baseUrl": "src",
   },
+  "files": ["typings/stein.d.ts"],
   "exclude": [
     "node_modules"
   ],
-  "files": [
-    "src/index.d.ts"
-  ],
+  
   "include": [
     "src"
   ]
