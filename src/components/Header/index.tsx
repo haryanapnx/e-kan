@@ -1,10 +1,9 @@
 import React from 'react'
 import { Carousel, Image } from 'antd';
-import { images } from './images'
-import logo from '../../logo.svg';
+import { banner1, banner2, banner3, logo } from "commons/images";
 import './style.scss';
 
-
+export const images: string[] = [banner1, banner2, banner3]
 
 const Header: React.FC = () => {
   return (
@@ -17,7 +16,7 @@ const Header: React.FC = () => {
               width="100%"
               src={item}
               placeholder={
-                <Image preview={false} src={logo} width={200}/>
+                <Image preview={false} src={logo} width="100%" />
               }
             />
           ))}

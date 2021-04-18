@@ -1,8 +1,8 @@
-import { useState, useEffect } from 'react'
+import React, { useState, useEffect } from 'react'
 import './style.scss'
 import { Input } from 'antd';
 
-const SearchBar = () => {
+const SearchBar: React.FC = () => {
   const [fixed, setFixed] = useState("")
 
   const listenScrollEvent = () => {
@@ -23,7 +23,7 @@ const SearchBar = () => {
     <div id="search-bar">
       <div className={`top-bar ${fixed}`}>
         <Input.Search
-          placeholder="input search text"
+          placeholder="Search"
           allowClear onSearch={() => { }}
           size="large"
         />
