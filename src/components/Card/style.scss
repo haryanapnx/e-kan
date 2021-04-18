@@ -1,0 +1,41 @@
+#card-product {
+  text-align: left;
+
+  .content {
+    padding: .75rem;
+
+    .content-top {
+      align-items: flex-start;
+      font-weight: 500;
+
+      .title {
+        color: #1d1d1d;
+        font-size: 14px;
+      }
+
+      .location {
+        color: #9b9b9b;
+        font-size: 12px;
+      }
+    }
+
+    .content-bottom {
+      align-items: flex-end;
+      height: 40px;
+      font-weight: 500;
+
+      .price {
+        color: #078f62;
+        font-size: 14px;
+      }
+
+      .date {
+        color: #9b9b9b;
+        font-size: 10px;
+      }
+
+
+    }
+
+  }
+}
