@@ -23,6 +23,7 @@ const LayoutWrapper: React.FC = (): JSX.Element => {
       <SearchBar />
       <Header />
       <Layout.Content className="__body shadow-md">
+        <ButtonSort />
         <Divider style={{margin: '12px 0'}} />
         {[1, 2, 3, 4, 5].map(item => (
           <Card key={item} />
