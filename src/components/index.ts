@@ -1,4 +1,4 @@
-import loadable from "utils/loadable";
+import loadable from "libs/loadable";
 
 export const SearchBar = loadable(() => import("./SearchBar"))
 export const Header = loadable(() => import("./Header"))

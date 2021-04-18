@@ -59,9 +59,9 @@ const CardProduct: React.FC = () => {
               </div>
             </div>
             <Dropdown overlay={menu}>
-              <a className="ant-dropdown-link" onClick={e => e.preventDefault()}>
+              <div className="ant-dropdown-link" onClick={e => e.preventDefault()}>
                 <MoreOutlined style={{ fontSize: 22, fontWeight: 600, color: 'grey' }} />
-              </a>
+              </div>
             </Dropdown>
 
           </div>
