@@ -1,14 +1,18 @@
-import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.scss';
-import 'antd/dist/antd.css';
-import App from './App';
+import LayoutApp from 'layouts';
 import reportWebVitals from './reportWebVitals';
+import { reducers } from 'context';
+import { Provider, applyMiddleware } from 'libs/stores';
+import './assets/scss/global.scss';
+import 'antd/dist/antd.css';
+
+const logger = console.log
+const md = applyMiddleware(logger);
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+  <Provider reducers={reducers} applyMiddleware={md}>
+    <LayoutApp />
+  </Provider>,
   document.getElementById('root')
 );
 
