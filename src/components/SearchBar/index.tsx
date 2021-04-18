@@ -1,15 +1,15 @@
-import React, { useState, useEffect } from 'react'
+import { useState, useEffect } from 'react'
 import './style.scss'
-import { Input, Space } from 'antd';
+import { Input } from 'antd';
 
 const SearchBar = () => {
-  const [header, setHeader] = useState("")
+  const [fixed, setFixed] = useState("")
 
   const listenScrollEvent = () => {
     if (window.scrollY < 73) {
-      setHeader("")
+      setFixed("")
     } else if (window.scrollY > 70) {
-      setHeader("fixed shadow")
+      setFixed("fixed shadow")
     }
   }
 
@@ -20,13 +20,15 @@ const SearchBar = () => {
   }, []);
 
   return (
-    <Space direction="horizontal" className="search-bar">
-      <Input.Search
-        placeholder="input search text"
-        allowClear onSearch={() => { }}
-        size="large"
-      />
-    </Space>
+    <div id="search-bar">
+      <div className={`top-bar ${fixed}`}>
+        <Input.Search
+          placeholder="input search text"
+          allowClear onSearch={() => { }}
+          size="large"
+        />
+      </div>
+    </div>
   )
 }
 
