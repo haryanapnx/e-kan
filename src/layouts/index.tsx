@@ -1,8 +1,8 @@
 import React, { useEffect } from 'react';
+import { Layout, Divider } from 'antd';
 import { getFishAction } from 'context/fish';
 import { useSelector, useDispatch } from 'libs/stores';
-import { Layout } from 'antd';
-import { SearchBar, Header, Card } from 'components';
+import { SearchBar, Header, Card, ButtonAdd, ButtonSort, Footer } from 'components';
 import './style.scss'
 
 const LayoutWrapper: React.FC = (): JSX.Element => {
@@ -22,12 +22,14 @@ const LayoutWrapper: React.FC = (): JSX.Element => {
     <Layout id="wrapper-component">
       <SearchBar />
       <Header />
-      <Layout.Content className="__body">
-        <div className="site-layout-content">
-          <Card />
-        </div>
+      <Layout.Content className="__body shadow-md">
+        <Divider style={{margin: '12px 0'}} />
+        {[1, 2, 3, 4, 5].map(item => (
+          <Card key={item} />
+        ))}
       </Layout.Content>
-      <Layout.Footer style={{ textAlign: 'center' }}>Ant Design ©2018 Created by Ant UED</Layout.Footer>
+      <ButtonAdd />
+      <Footer />
     </Layout>
   )
 }
