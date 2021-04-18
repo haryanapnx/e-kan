@@ -15,6 +15,7 @@ const Header: React.FC = () => {
               key={item}
               width="100%"
               src={item}
+              preview={false}
               placeholder={
                 <Image preview={false} src={logo} width="100%" />
               }

@@ -1,11 +1,16 @@
 #search-bar {
   z-index: 3;
+
   .top-bar {
     padding: .75rem .75rem;
     position: absolute;
     width: 100%;
     transform: translateY(0);
     transition: transform 0.6s ease;
+  }
+
+  .text-muted {
+    color: #d9d9d9;
   }
 
   .fixed {
@@ -16,21 +21,35 @@
     animation: myanimation 3s;
   }
 
+  .history {
+    background-color: #fff;
+    width: calc(100% - 3px);
+    margin-left: .1rem;
+    padding: 5px;
+    border-radius: 5px;
+
+    .list-item {
+      width: 80%;
+    }
+  }
+
   .ant-input-search .ant-input-group .ant-input-affix-wrapper:not(:last-child) {
     border-top-left-radius: 5px;
     border-bottom-left-radius: 5px;
   }
 
-  .ant-input-group > .ant-input:last-child, .ant-input-group-addon:last-child {
+  .ant-input-group>.ant-input:last-child,
+  .ant-input-group-addon:last-child {
     border-top-left-radius: 5px;
     border-bottom-left-radius: 5px;
-}
+  }
 
   .ant-input-search>.ant-input-group>.ant-input-group-addon:last-child .ant-input-search-button {
-    padding-top: 0;
-    padding-bottom: 0;
     border-radius: 0 5px 5px 0;
   }
+  .ant-input-group-addon {
+    border-radius: 5px;
+}
 
   @keyframes myanimation {
     0% {

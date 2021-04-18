@@ -39,11 +39,13 @@ const CardProduct: React.FC = () => {
     <Card
       bodyStyle={{ padding: '0' }}
       id="card-product"
+      bordered={false}
+      className="shadow"
     >
       <Row align="middle">
         <Col xs={8} sm={8} md={6} lg={4} xl={4} className="columns v-middle">
           <Avatar
-            size={{ xs: 100, sm: 100, md: 150, lg: 200, xl: 200, xxl: 200 }}
+            size={{ xs: 100, sm: 130, md: 140, lg: 150, xl: 150, xxl: 160 }}
             src={product}
           />
         </Col>
