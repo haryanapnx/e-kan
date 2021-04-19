@@ -21,7 +21,7 @@
     "jsx": "react-jsx",
     "baseUrl": "src",
   },
-  "files": ["typings/stein.d.ts"],
+  "files": ["typings/stein.d.ts","typings/json-form.d.ts"],
   "exclude": [
     "node_modules"
   ],
