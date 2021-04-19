@@ -1,5 +1,7 @@
 import React from 'react';
 import moment from 'moment';
+import { useDispatch } from 'libs/stores';
+import { showModal, ModalName } from 'context/modal';
 import { Card, Row, Col, Avatar, Dropdown, Menu } from 'antd';
 import {
   EnvironmentOutlined,
@@ -12,36 +14,33 @@ import {
 import { product } from 'commons/images';
 import { FishItems } from 'context/fish';
 import { convertCurrency } from 'q-utils-q';
-
 import './style.scss';
 
-// const item = {
-//   "uuid": "0c192840-7ee4-11ea-b3e1-e335da5df3hj",
-//   "komoditas": "Cupang",
-//   "area_provinsi": "JAWA BARAT",
-//   "area_kota": "CIMAHI",
-//   "size": "101",
-//   "price": "20100",
-//   "tgl_parsed": "2020-06-01T00:00:00+07:00",
-//   "timestamp": "1590944400"
-// }
-
 interface Props {
-  item: FishItems
+  item: FishItems | any
 }
 
 const CardProduct: React.FC<Props> = ({ item }) => {
+  const d = useDispatch()
+  const editData = () => {
+    showModal({ isOpen: true, name: ModalName.ADD_FISH, size: 1300, data: item, other: 'edit' }, d)
+  }
+
+  const deleteData = () => {
+    showModal({ isOpen: true, name: ModalName.DELETE_FISH, size: 600, data: item.uuid }, d)
+  }
 
   const options = (
-    <Menu onClick={() => { }}>
-      <Menu.Item key="1" icon={<EditOutlined />}>
+    <Menu>
+      <Menu.Item onClick={editData} key="1" icon={<EditOutlined />}>
         Edit
       </Menu.Item>
-      <Menu.Item key="2" icon={<DeleteOutlined />}>
+      <Menu.Item onClick={deleteData} key="2" icon={<DeleteOutlined />}>
         Delete
       </Menu.Item>
     </Menu>
   );
+
   return (
     <Card
       bodyStyle={{ padding: '0' }}

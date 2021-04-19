@@ -15,6 +15,7 @@ export enum ModalTypes {
 
 export enum ModalName {
    ADD_FISH = 'ADD_FISH',
+   DELETE_FISH = 'DELETE_FISH',
 }
 
 export interface ModalState {

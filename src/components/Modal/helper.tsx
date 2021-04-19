@@ -1,5 +1,5 @@
 import { ModalName } from 'context/modal';
-import { AddForm } from 'components'
+import { AddForm, DeleteConfirmation } from 'components'
 
 const _ = ModalName;
 
@@ -9,7 +9,8 @@ interface Props {
 
 export const renderChildren = (name: string, props: any, toggle: () => void) => {
   const c: Props = {
-    [_.ADD_FISH]: <AddForm {...props} toggle={toggle} c='AddForm' />,
+    [_.ADD_FISH]: <AddForm {...props} toggle={toggle} />,
+    [_.DELETE_FISH]: <DeleteConfirmation {...props} toggle={toggle} />,
   }
   return c[name] ? c[name] : <div />;
 }
