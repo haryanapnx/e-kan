@@ -1,4 +1,4 @@
 export * from './providers';
 export * from './middlewares';
-export * from './useStores';
+export * from './use-stores';
 export * from './combine-reducers';
