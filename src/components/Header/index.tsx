@@ -16,9 +16,6 @@ const Header: React.FC = () => {
               width="100%"
               src={item}
               preview={false}
-              placeholder={
-                <Image preview={false} src={logo} width="100%" />
-              }
             />
           ))}
         </Carousel>

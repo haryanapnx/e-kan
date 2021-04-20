@@ -4,6 +4,8 @@ import { message } from 'antd';
 import { resources } from 'utils/api';
 import { resetModal } from 'context/modal'
 import { filterFishList } from 'utils/filterFishList';
+import { sortlist } from 'utils/sorting';
+
 
 export const getFishAction = async (dispatch: Dispatch): Promise<any> => {
   try {
@@ -12,7 +14,8 @@ export const getFishAction = async (dispatch: Dispatch): Promise<any> => {
     const res = await resources.read('list')
 
     // set data to reducers
-    dispatch({ type: FishTypes.SET_FISH, payload: filterFishList(res) });
+    const sorted = sortlist(filterFishList(res), 'default', 'desc')
+    dispatch({ type: FishTypes.SET_FISH, payload: sorted });
   } catch (error) {
     dispatch({ type: FishTypes.ERROR_FISH })
     message.error(error?.response?.data);

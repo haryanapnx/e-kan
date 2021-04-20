@@ -1,4 +1,5 @@
 import { FistStateInterface, FishTypes, FishActionType } from './types';
+import { sortlist } from 'utils/sorting';
 
 export const INITIAL_STATE: FistStateInterface = {
   list: [],
@@ -15,7 +16,11 @@ export const fishReducer = (
     case FishTypes.REQUEST_FISH:
       return { ...state, loading: true }
     case FishTypes.SET_FISH:
-      return { ...state, list: action.payload, loading: false }
+      return {
+        ...state,
+        list: action.payload,
+        loading: false
+      }
     case FishTypes.ERROR_FISH:
       return { ...state, loading: false }
     case FishTypes.POST_REQUEST_FISH:
