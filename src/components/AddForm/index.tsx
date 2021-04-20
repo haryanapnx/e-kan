@@ -92,7 +92,7 @@ const AddForm: React.FC<Props> = ({ data, other }): JSX.Element => {
           <InputNumber
             style={{ width: 250 }}
             formatter={value => `${value}`.replace(/\B(?=(\d{3})+(?!\d))/g, ',')}
-            parser={(value: any) => value?.replace(/\Rp\s?|(,*)/g, '')}
+            parser={(value: any) => value?.replace(/(,*)/g, '')}
           />
         </Form.Item>
         <Form.Item className="button-submit">

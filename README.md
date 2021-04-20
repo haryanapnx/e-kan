@@ -4,7 +4,7 @@ __E-kan__ is a monitoring platform for fish commodities from various regions.
 
 ## demo
 
-[E-kan](http://localhost:3000)
+[E-kan](https://e-kan.vercel.app)
 
 ## Project Setup
  - Rename file `.env.example` to `.env `
