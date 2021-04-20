@@ -7,7 +7,7 @@ import { Provider, applyMiddleware } from 'libs/stores';
 import './assets/scss/global.scss';
 import 'antd/dist/antd.css';
 
-const logger = console.log
+const logger = process.env.NODE_ENV === 'production' ? () => {} : console.log
 const md = applyMiddleware(logger);
 
 ReactDOM.render(

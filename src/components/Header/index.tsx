@@ -6,6 +6,7 @@ import './style.scss';
 export const images: string[] = [banner1, banner2, banner3]
 
 const Header: React.FC = () => {
+  
   return (
     <header id="header">
       <div className="__background">

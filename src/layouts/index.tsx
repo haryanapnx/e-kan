@@ -50,7 +50,7 @@ const LayoutWrapper: React.FC = (): JSX.Element => {
       <SearchBar value={search} handleChange={(v: any) => setSearch(v)} />
       <Header />
       <Layout id="wrapper-component">
-        <Row justify="center" style={{background:'unset'}}>
+        <Row justify="center" style={{ background: 'unset' }}>
           <Col xs={{ span: 24, offset: 0 }} lg={{ span: 18, offset: 0 }} xl={{ span: 18, offset: 0 }}>
             <Layout.Content className="__body shadow-md">
               <div className={fixed}>
@@ -59,13 +59,14 @@ const LayoutWrapper: React.FC = (): JSX.Element => {
               </div>
               <Divider style={{ margin: '12px 0' }} />
               <Row gutter={[16, 16]}>
-                {loading && <CardSkeleton />}
-                {!isEmpty(listItem) ?
-                  listItem.map((item: FishItems, i: number) => (
-                    <Col key={i} xs={24} sm={24} md={12} lg={12} xl={12}>
-                      <Card item={item} />
-                    </Col>
-                  )) : <Empty className="empty" />}
+                {loading ? <CardSkeleton /> :
+                  !isEmpty(listItem) ?
+                    listItem.map((item: FishItems, i: number) => (
+                      <Col key={i} xs={24} sm={24} md={12} lg={12} xl={12}>
+                        <Card item={item} />
+                      </Col>
+                    )) : <Empty className="empty" />
+                }
               </Row>
             </Layout.Content>
           </Col>

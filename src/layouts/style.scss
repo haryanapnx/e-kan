@@ -5,6 +5,10 @@
     margin-top: -8rem;
     background: white;
     border-radius: 2rem 2rem 0 0;
+    @media (min-width: 320px) and (max-width: 480px) {
+      padding: 1rem;
+      margin-top: -1rem;
+    }
   }
 
   .empty {
