@@ -38,7 +38,9 @@ const SearchBar: React.FC<Props> = ({ value, handleChange }) => {
 
   const handleSubmit = (e: any) => {
     const newHistory = [...parseHistory]
-    newHistory.unshift(searchVal)
+    if (!isEmpty(searchVal)) {
+      newHistory.unshift(searchVal)
+    }
     const filtered = newHistory.filter((v, i, arr) => arr.indexOf(v) === i);
     setHistory(filtered)
     handleChange(searchVal)
@@ -80,9 +82,9 @@ const SearchBar: React.FC<Props> = ({ value, handleChange }) => {
                 <div ref={ref} className="history">
                   <b className="text-muted">History: </b>
                   { !isEmpty(history) ? history.slice(0, 3).map((item, i) => (
-                    <div className="columns" key={i}>
+                    <div className="columns" style={{marginBottom:'.5rem'}} key={i}>
                       <span className="list-item" onClick={() => setSearch(item)}>{item}</span>
-                      <div onClick={() => removeHistory(i)} style={{ textAlign: "right" }}><CloseCircleOutlined /></div>
+                      <div onClick={() => removeHistory(i)} style={{ textAlign: "right" }}><CloseCircleOutlined size={14} /></div>
                     </div>
                   )) : <small className="text-muted">Tidak ada riwayat pencarian.</small>
                   }
