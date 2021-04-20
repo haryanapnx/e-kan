@@ -7,15 +7,24 @@ import './styles.scss'
 
 const ButtonAdd: React.FC = (): JSX.Element => {
   const d = useDispatch()
+
   const setModal = () => {
     showModal({ isOpen: true, name: ModalName.ADD_FISH, size: 1300 }, d)
   }
+
   return (
-    <div className="add-button">
-      <Button onClick={setModal} type="primary" shape="round" icon={<PlusCircleFilled />} size="large">ADD</Button>
+    <div id="add-button">
+      <Button
+        onClick={setModal}
+        type="primary"
+        shape="round"
+        icon={<PlusCircleFilled />}
+        size="large"
+      >
+        ADD
+        </Button>
     </div>
   )
 };
-
 
 export default ButtonAdd;

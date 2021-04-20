@@ -1,4 +1,4 @@
-import { GeneralStateInterface, GeneralTypes, SizeItem, DefaultOption } from './types';
+import { GeneralStateInterface, GeneralTypes, SizeItem } from './types';
 import { optionTransformer } from 'utils/optionTransformer';
 
 export const INITIAL_STATE: GeneralStateInterface = {

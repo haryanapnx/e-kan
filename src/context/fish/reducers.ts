@@ -1,5 +1,4 @@
 import { FistStateInterface, FishTypes, FishActionType } from './types';
-import { sortlist } from 'utils/sorting';
 
 export const INITIAL_STATE: FistStateInterface = {
   list: [],

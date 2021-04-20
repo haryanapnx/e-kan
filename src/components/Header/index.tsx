@@ -1,6 +1,6 @@
 import React from 'react'
 import { Carousel, Image } from 'antd';
-import { banner1, banner2, banner3, logo } from "commons/images";
+import { banner1, banner2, banner3 } from "commons/images";
 import './style.scss';
 
 export const images: string[] = [banner1, banner2, banner3]
@@ -13,7 +13,6 @@ const Header: React.FC = () => {
           {images.map(item => (
             <Image
               key={item}
-              width="100%"
               src={item}
               preview={false}
             />

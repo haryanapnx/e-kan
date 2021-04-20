@@ -49,13 +49,13 @@ const CardProduct: React.FC<Props> = ({ item }) => {
       className="shadow"
     >
       <Row align="middle">
-        <Col xs={8} sm={8} md={8} lg={10} xl={12} className="columns v-middle">
+        <Col xs={6} sm={8} md={8} lg={8} xl={8} className="columns v-middle">
           <Avatar
-            size={{ xs: 100, sm: 130, md: 140, lg: 150, xl: 150, xxl: 160 }}
+            size={{ xs: 100, sm: 120, md: 130, lg: 130, xl: 150, xxl: 160 }}
             src={product}
           />
         </Col>
-        <Col xs={16} sm={16} md={16} lg={14} xl={12} className="content">
+        <Col xs={18} sm={16} md={16} lg={16} xl={16} className="content">
           <div className="content-top columns h-top">
             <div>
               <div className="title">{item.komoditas}</div>

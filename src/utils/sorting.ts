@@ -1,4 +1,4 @@
-
+/* eslint-disable no-sequences */
 
 export const sortlist = (list: any, name: string = 'default', type: string) => {
   switch (name) {

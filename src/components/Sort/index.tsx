@@ -53,7 +53,7 @@ const Sort: React.FC<Props> = ({ toggle }) => {
         </Radio.Group>
       </div>
       <div className="button">
-        <Space size="large" align="baseline">
+        <Space size="large" align="center">
           <Button disabled={isDefault} shape="round" onClick={() => handleSort(name, 'asc')} icon={<SortAscendingOutlined />}>Ascending</Button>
           <Button disabled={isDefault} shape="round" onClick={() => handleSort(name, 'desc')} icon={<SortDescendingOutlined />}>Descending</Button>
           <Button shape="round" onClick={() => handleSort('default', 'desc')} >Reset</Button>

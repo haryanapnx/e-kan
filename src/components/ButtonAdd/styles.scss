@@ -1,9 +1,10 @@
-.add-button {
-  position: fixed;
-  right: 1rem;
-  bottom: 1rem;
-  z-index: 5;
-  .btn{
+#add-button {
+
+  .normal {
+    position: relative;
+  }
+
+  &.btn {
     padding: 1rem;
   }
 }
