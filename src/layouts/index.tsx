@@ -10,7 +10,7 @@ import './style.scss'
 const LayoutWrapper: React.FC = (): JSX.Element => {
   const d = useDispatch()
   const [fixed, setFixed] = useState<string>("columns");
-  const [fishList, setFishList] = useState<any>([])
+  const [fishList, setFishList] = useState<FishItems[]>([])
   const [search, setSearch] = useState<string>("");
   const { list, loading } = useSelector(({ fish }: Storage) => fish)
 
@@ -73,7 +73,6 @@ const LayoutWrapper: React.FC = (): JSX.Element => {
         </Row>
         <Footer />
       </Layout>
-
       <BackTop />
       <ModalContainer />
     </React.Fragment>

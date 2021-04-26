@@ -1,5 +1,5 @@
 # E-kan - Web Apps
-__E-kan__ is a monitoring platform for fish commodities from various regions.
+__E-kan__ is a monitoring web platform for fish commodities from various regions.
 
 
 ## demo
@@ -44,7 +44,7 @@ run locally
 __Build Image__
  - `copy & run` this script __`docker build -t e-kan.`__ into your terminal.
  
- > Note: In this case Docker is already installed ! <br>if don't, you can follow [this](http://localhost:3000)
+ > Note: In this case Docker is already installed ! <br>if don't, you can follow [this](https://www.docker.com/get-started)
  
 __Run__
 

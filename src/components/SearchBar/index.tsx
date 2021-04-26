@@ -36,7 +36,7 @@ const SearchBar: React.FC<Props> = ({ value, handleChange }) => {
     localStorage.setItem('history', JSON.stringify(newHistory))
   }
 
-  const handleSubmit = (e: any) => {
+  const handleSubmit = () => {
     const newHistory = [...parseHistory]
     if (!isEmpty(searchVal)) {
       newHistory.unshift(searchVal)
@@ -45,6 +45,7 @@ const SearchBar: React.FC<Props> = ({ value, handleChange }) => {
     setHistory(filtered)
     handleChange(searchVal)
     localStorage.setItem('history', JSON.stringify(filtered))
+    setVisible(false)
   }
 
   useEffect(() => {

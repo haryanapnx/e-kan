@@ -9,9 +9,9 @@ export const sortlist = (list: any, name: string = 'default', type: string) => {
       return list.sort((a: any, b: any) => (new Date(b.tgl_parsed) as any) - (new Date(a.tgl_parsed) as any));
     case 'comodity':
       if (type === 'desc') {
-        return list.sort(sortBy('comodity', true, (a: string) => a.toUpperCase()))
+        return list.sort(sortBy('komoditas', true, (a: string) => a.toUpperCase()))
       }
-      return list.sort(sortBy('comodity', false, (a: string) => a.toUpperCase()))
+      return list.sort(sortBy('komoditas', false, (a: string) => a.toUpperCase()))
     case 'province':
       if (type === 'desc') {
         return list.sort(sortBy('area_provinsi', true, (a: string) => a.toUpperCase()))

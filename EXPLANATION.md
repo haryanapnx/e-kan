@@ -10,6 +10,7 @@
 ### Fitur
 
 Dengan design yang clean dengan perpaduan warna hijau dan gradasi warna merah jambu, biru membuat nyaman untuk di pandang dan di bekali beberapa fitur :
+- __Ofline Mode (PWA)__: Dapat diakses ketika minim sinyal atau bahkan tidak ada siyal.
 - __Search__: Mempercepat pengguna untuk mencari komoditas.
 - __Sort__: Mempermudah mengurutkan data A-Z atau sebaliknya.
 - __Add__: Mempermudah pengguna untuk menambah data
