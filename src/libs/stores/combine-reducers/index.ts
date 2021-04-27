@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 /* eslint-disable no-param-reassign */
-export const combineReducers = (reducers: any) => {
+export const combineReducers = <T>(reducers: T) => {
   const entries = Object.entries(reducers);
   return (
     state: any = {},
