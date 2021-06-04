@@ -8,7 +8,7 @@ __E-kan__ is a monitoring web platform for fish commodities from various regions
 
 ## Project Setup
  - Rename file `.env.example` to `.env `
- - `npm install` to Install all packages and dependensi
+ - `npm install` to Install all packages and dependencies
 
 
 
